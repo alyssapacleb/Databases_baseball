@@ -2,65 +2,59 @@ This database consists of 9 files related to baseball statistics from 1871 to 20
 
 The four main tables (shown with 3 rows of sample data) are: 
 	
-	People - Player names, DOB, and biographical info
+People - Player names, DOB, and biographical info
+
 playerID,birthYear,birthMonth,birthDay,birthCountry,birthState,birthCity,deathYear,deathMonth,deathDay,deathCountry,deathState,deathCity,nameFirst,nameLast,nameGiven,weight,height,bats,throws,debut,finalGame,retroID,bbrefID
 aardsda01,1981,12,27,USA,CO,Denver,,,,,,,David,Aardsma,David Allan,215,75,R,R,2004-04-06,2015-08-23,aardd001,aardsda01
 aaronha01,1934,2,5,USA,AL,Mobile,,,,,,,Hank,Aaron,Henry Louis,180,72,R,R,1954-04-13,1976-10-03,aaroh101,aaronha01
 aaronto01,1939,8,5,USA,AL,Mobile,1984,8,16,USA,GA,Atlanta,Tommie,Aaron,Tommie Lee,190,75,R,R,1962-04-10,1971-09-26,aarot101,aaronto01
+------------------------------------------------------------------------------
+Batting - batting statistics
 
-
-	Batting - batting statistics
-playerID,yearID,stint,teamID,lgID,G,AB,R,H,2B,3B,HR,RBI,SB,CS,BB,SO,IBB,HBP,SH,SF,GIDP
-abercda01,1871,1,TRO,NA,1,4,0,0,0,0,0,0,0,0,0,0,,,,,0
-addybo01,1871,1,RC1,NA,25,118,30,32,6,0,0,13,8,1,4,0,,,,,0
+playerID,	yearID,	stint,	teamID,	lgID,	G,	AB,	R,	H,	2B,	3B,	HR,	RBI,	SB,	CS,	BB,	SO,	IBB,	HBP,	SH,	SF,	GIDP
+abercda01,	1871,	1,	TRO,	NA,	1,	4,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	,	,	,	,	0
+addybo01,	1871,	1,	RC1,	NA,	25,	118,	30,	32,	6,	0	0,	13,	8,	1,	4,	0,	,	,	,	,	0
 allisar01,1871,1,CL1,NA,29,137,28,40,4,5,0,19,3,1,2,5,,,,,1
+------------------------------------------------------------------------------
+Pitching - pitching statistics
 
-	Pitching - pitching statistics
 playerID,yearID,stint,teamID,lgID,W,L,G,GS,CG,SHO,SV,IPouts,H,ER,HR,BB,SO,BAOpp,ERA,IBB,WP,HBP,BK,BFP,GF,R,SH,SF,GIDP
 bechtge01,1871,1,PH1,NA,1,2,3,3,2,0,0,78,43,23,0,11,1,,7.96,,7,,0,146,0,42,,,
 brainas01,1871,1,WS3,NA,12,15,30,30,30,0,0,792,361,132,4,37,13,,4.50,,7,,0,1291,0,292,,,
 fergubo01,1871,1,NY2,NA,0,0,1,0,0,0,0,3,8,3,0,0,0,,27.00,,2,,0,14,0,9,,,
+------------------------------------------------------------------------------
+Fielding - fielding statistics 
 
-
-	Fielding - fielding statistics 
-playerID,yearID,stint,teamID,lgID,POS,G,GS,InnOuts,PO,A,E,DP,PB,WP,SB,CS,ZR
-abercda01,1871,1,TRO,NA,SS,1,1,24,1,3,2,0,,,,,
-addybo01,1871,1,RC1,NA,2B,22,22,606,67,72,42,5,,,,,
-addybo01,1871,1,RC1,NA,SS,3,3,96,8,14,7,0,,,,,
+playerID,	yearID,	stint,	teamID,	lgID,	POS,	G,	GS,	InnOuts,	PO,	A,	E,	DP,	PB,	WP,	SB,	CS,	ZR
+abercda01,	1871,	1,	TRO,	NA,	SS,	1,	1,	24,		1,	3,	2,	0,	,	,	,	,	,	
+addybo01,	1871,	1,	RC1,	NA,	2B,	22,	22,	606,		67,	72,	42,	5,	,	,	,	,	,	
+addybo01,	1871,	1,	RC1,	NA,	SS,	3,	3,	96,		8,	14,	7,	0,	,	,	,	,	,	
+------------------------------------------------------------------------------
 
 
 These tables are supplemented by the following tables (shown with 3 rows of sample data): 
 	
-	Appearances - details on the positions a player appeared at
+Appearances - details on the positions a player appeared at
+
 yearID,teamID,lgID,playerID,G_all,GS,G_batting,G_defense,G_p,G_c,G_1b,G_2b,G_3b,G_ss,G_lf,G_cf,G_rf,G_of,G_dh,G_ph,G_pr
 1871,TRO,NA,abercda01,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0
 1871,RC1,NA,addybo01,25,25,25,25,0,0,0,22,0,3,0,0,0,0,0,0,0
 1871,CL1,NA,allisar01,29,29,29,29,0,0,0,2,0,0,0,29,0,29,0,0,0
-	
-	BattingPost - post-season batting statistics
-yearID,round,playerID,teamID,lgID,G,AB,R,H,2B,3B,HR,RBI,SB,CS,BB,SO,IBB,HBP,SH,SF,GIDP
-1884,WS,becanbu01,NY4,AA,1,2,0,1,0,0,0,0,0,,0,0,0,,,,
-1884,WS,bradyst01,NY4,AA,3,10,1,0,0,0,0,0,0,,0,1,0,,,,
-1884,WS,carrocl01,PRO,NL,3,10,2,1,0,0,0,1,0,,1,1,0,,,,
+------------------------------------------------------------------------------	
+Salaries - player salary data
 
-	FieldingOF - outfield position data
-playerID,yearID,stint,Glf,Gcf,Grf
-allisar01,1871,1,0,29,0
-ansonca01,1871,1,1,0,0
-armstbo01,1871,1,0,11,1
+yearID,	teamID,	lgID,	playerID,	salary
+1985,	ATL,	NL,	barkele01,	870000
+1985,	ATL,	NL,	bedrost01,	550000
+1985,	ATL,	NL,	benedbr01,	545000
+------------------------------------------------------------------------------
+Teams - yearly stats and standings 
 
-
-	FieldingPost- post-season fielding data
-playerID,yearID,teamID,lgID,round,POS,G,GS,InnOuts,PO,A,E,DP,TP,PB,SB,CS
-beaumgi01,1903,PIT,NL,WS,CF,8,8,210,21,0,0,0,0,,,
-branski01,1903,PIT,NL,WS,1B,8,8,210,81,6,3,5,0,,,
-clarkfr01,1903,PIT,NL,WS,LF,8,8,210,18,0,1,0,0,,,
-
-	Salaries - player salary data
-yearID,teamID,lgID,playerID,salary
-1985,ATL,NL,barkele01,870000
-1985,ATL,NL,bedrost01,550000
-1985,ATL,NL,benedbr01,545000
+yearID,lgID,teamID,franchID,divID,Rank,G,Ghome,W,L,DivWin,WCWin,LgWin,WSWin,R,AB,H,2B,3B,HR,BB,SO,SB,CS,HBP,SF,RA,ER,ERA,CG,SHO,SV,IPouts,HA,HRA,BBA,SOA,E,DP,FP,name,park,attendance,BPF,PPF,teamIDBR,teamIDlahman45,teamIDretro
+1871,NA,BS1,BNA,,3,31,,20,10,,,N,,401,1372,426,70,37,3,60,19,73,16,,,303,109,3.55,22,1,3,828,367,2,42,23,243,24,0.834,Boston Red Stockings,South End Grounds I,,103,98,BOS,BS1,BS1
+1871,NA,CH1,CNA,,2,28,,19,9,,,N,,302,1196,323,52,21,10,60,22,69,21,,,241,77,2.76,25,0,1,753,308,6,28,22,229,16,0.829,Chicago White Stockings,Union Base-Ball Grounds,,104,102,CHI,CH1,CH1
+1871,NA,CL1,CFC,,8,29,,10,19,,,N,,249,1186,328,35,40,7,26,25,18,8,,,341,116,4.11,23,0,0,762,346,13,53,34,234,15,0.818,Cleveland Forest Citys,National Association Grounds,,96,100,CLE,CL1,CL1
+------------------------------------------------------------------------------
 
 
 These datasets relate players by a specific identifier and list their different skills playing different roles. 
