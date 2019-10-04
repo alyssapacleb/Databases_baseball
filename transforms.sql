@@ -17,7 +17,7 @@ order by playerID
 
 -- Created pitchers table
 create table seanlahman_modeled.pitchers as
-select distinct playerID, yearID, stint, teamID, lgID, W, L, G, GS, CG, SHO, SV, IPouts, H, ER, HR, BB, SO, safe_cast(BAOpp as FLOAT64) as BAOpp, ERA, safe_cast(IBB as INT64) as IBB, WP, safe_cast(HBP as INT64) as HBP, BK, BFP, GF, safe_cast(SH as INT64) as SH , safe_cast(SF as INT64) as SF, safe_cast(GIDP as INT64) as GIDP
+select distinct playerID, yearID, stint, teamID, lgID, W, L, G, GS, CG, SHO, SV, IPouts, H, ER, HR, BB, SO, safe_cast(BAOpp as FLOAT64) as BAOpp, ERA, safe_cast(IBB as INT64) as IBB, WP, safe_cast(HBP as INT64) as HBP, BK, BFP, R, GF, safe_cast(SH as INT64) as SH , safe_cast(SF as INT64) as SF, safe_cast(GIDP as INT64) as GIDP
 from seanlahman_staging.Pitching
 order by playerID
 
