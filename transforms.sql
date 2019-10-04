@@ -11,7 +11,7 @@ WHERE TRUE
 
 -- Created player table
 create table seanlahman_modeled.players as
-select distinct playerID, nameFirst, nameLast, nameGiven, debut, weight, height, birthCountry, birthCity 
+select distinct playerID, nameFirst, nameLast, nameGiven, debut, weight, height, birthCountry, birthCity, birthyear, birthmonth, birthday, bats, throws
 from seanlahman_staging.People
 order by playerID
 
