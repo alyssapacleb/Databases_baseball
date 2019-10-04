@@ -59,7 +59,20 @@ UPDATE seanlahman_modeled.salaries
 SET pysID = concat(cast(playerID as string), cast(yearID as string))
 WHERE TRUE
 
+-- PRIMARY KEY CHECK
+select count (*) from seanlahman_modeled.teams
+select count (*) from seanlahman_modeled.fielders 
+select count (*) from seanlahman_modeled.batters
+select count (*) from seanlahman_modeled.players 
+select count (*) from seanlahman_modeled.pitchers
+select count (*) from seanlahman_modeled.salaries
 
+select count (distinct tyID) from seanlahman_modeled.teams
+select count (distinct pysID) from seanlahman_modeled.fielders 
+select count (distinct pysID) from seanlahman_modeled.batters
+select count (distinct playerID) from seanlahman_modeled.players
+select count (distinct playerID) from seanlahman_modeled.pitchers
+select count (distinct playerID) from seanlahman_modeled.salaries
 
 
 
