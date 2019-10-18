@@ -150,7 +150,7 @@ with beam.Pipeline('DirectRunner', options = opts) as p:
     done | 'Write File' >> WriteToText('output.txt')
     
     # make the BQ table
-    qualified_table_name = PROJECT_ID + ':seanlahman_modeled.players_clean2'
+    qualified_table_name = PROJECT_ID + ':seanlahman_modeled.players_Beam'
     
     table_schema = 'playerID:STRING, nameFirst:STRING, nameLast:STRING, nameGiven:STRING, debut:DATE, weight:INTEGER, height:INTEGER, birthCountry:STRING, birthCity:STRING, dob:DATE, bats:STRING, throws:STRING'
     
