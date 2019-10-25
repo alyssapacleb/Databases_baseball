@@ -12,7 +12,7 @@
  group by f_GS
  having f_GS > 5
  order by f_GS desc
- -- 3 Max: Select the player IDs and the top salaries in the league. Then, only show players that have salaries that are greater than 10 million.
+ -- 3 Max: Select the player IDs and the top salaries in the league. Then, only show players that have salaries that are greater than 1 million.
  -- Finally, order these salaries in descending order so that we can see the top salaries first.
  select playerID, max (salary) as max_salary
  from seanlahman_modeled.player_stats_all
