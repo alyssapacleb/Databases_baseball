@@ -17,7 +17,9 @@
  having max_salary >10000000
  order by max_salary desc
  -- 4 Sum
- 
+ select playerID, sum (p_SO) as num_total_SO
+ from seanlahman_modeled.player_stats_all
+ group by playerID
  -- 5 Average
  select yearID, avg (salary) as average_salary from
  seanlahman_modeled.player_stats_all
