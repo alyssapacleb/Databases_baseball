@@ -1,5 +1,3 @@
--- player_stats_all .  teams   players_Beam
-
 -- 1 selected the first name, last name, and height from the players table where the players' height were greater than the average height across the league 
 select nameFirst, nameLast, height
 from seanlahman_modeled.players_Beam
