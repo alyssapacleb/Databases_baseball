@@ -53,3 +53,35 @@ yearID,	teamID,	lgID,	playerID,	salary
 These datasets relate players by a specific identifier and list their different skills playing different roles. 
 I want to analyze the data to determine how baseball player salary is affected by their skill and the cost of living. I plan on finding a dataset that relates the player’s salary to the US economy. 
 
+------------------------------------------------------------------------------
+
+The second dataset that we are going to make connections with has to do with batters, specifically. The database can be found at this link: http://baseballguru.com/jalbright/stats.html
+
+The table will look a little like this, and have these fields. You will notice that there is overlap between some of the fields here and in our previous dataset. 
+
+Year LG	City Team FName	LName Pos1 Pos Bats G AB R H 2B	3B HR RBI BB K AVG OBP SLG 
+
+Each of the fields defined:
+-Year: The year in which all of the data was pulled (will also be name of the file becuase the data is grouped by year. 
+-LG: This is the league that the player plays in. There are two leagues, the Central League and the Pacific League.
+-City: City that the player plays for.
+-Team: The team that the player played for in a given year. 
+-FName: The first name of the player.
+-LName:The last name of the player.
+-Pos1: This is a numeric value for the position being played. For example, a catcher is 2 and a 3rd baseman is 5 on the field.
+-Pos: This is the actual letter for the position being played. Catcher is "C" and 3rd baseman is "3B"
+-Bats: This is whether the batter bats as a lefty or a righty.
+-AB:The number of at bats that each batter had; number of plate appearances
+-R:The number of runs that each batter scored
+-H: Times reached base because of a batted, fair ball without error by the defense
+-2B: Hits on which the batter reaches second base safely without the contribution of a fielding error
+-3B: Hits on which the batter reaches third base safely without the contribution of a fielding error
+-HR: Hits on which the batter successfully touched all four bases, without the contribution of a fielding error
+-RBI: Number of runners who score due to a batters' action, except when batter grounded into double play or reached on an error
+-BB: Hitter not swinging at four pitches called out of the strike zone and awarded first base
+-K: Number of times that a third strike is taken or swung at and missed, or bunted foul. Catcher must catch the third strike or batter may attempt to run to first base
+-AVG: Opponents batting average, or hits allowed divided by at-bats faced
+-OBP: On-Base-Percentage (%)
+-SLG: Slugging average; total bases achieved on hits divided by at-bats (TB/AB)
+
+
