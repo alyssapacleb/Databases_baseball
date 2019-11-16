@@ -1,8 +1,28 @@
 Query 1:
+select pyspID, b.FName, b.LName, a.b_g, b.g
+from seanlahman_modeled.player_stats_all a join sabermetrics_modeled.jBat b
+on (a.yearID = b.Year and a.b_g = b.g)
+where a.b_g > 100 limit 10
+
 Most values in each dataset are integers or floats and there are no apparent violations of this after safe casting the Japanese Baseball Table, so the results of the query are expected. 
 
 Query 2:
+select a.yearID, a.teamID, avg (a.b_R) as average_team_runs 
+from seanlahman_modeled.player_stats_all a
+group by a.yearID, a.teamID
+union distinct
+select b.Year, b.Team, avg (b.R) as average_team_runs
+from sabermetrics_modeled.jBat b
+group by b.Year, b.Team
+order by average_team_runs desc limit 10
+
 Again, most values in each dataset are integers or floats and there are no apparent violations of this after safe casting the Japanese Baseball Table, so the results of the query are expected. Team IDs need to be added in the transforms
 
 Query 3:
+select distinct pysID, a.yearID, b.FName, b.LName, a.b_SB, b.SB
+from seanlahman_modeled.player_stats_all a join sabermetrics_modeled.jBat b
+on (a.yearID = b.Year and a.b_SB = b.SB)
+where a.b_SB > 5 and b.FName is not null and b.LName is not null 
+order by b.SB desc
+
 The result of the query is expected due to the same reasons above. Again, there are many incomplete names in the Japanese baseball table that need to be transformed using Beam. 
