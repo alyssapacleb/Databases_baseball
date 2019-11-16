@@ -59,7 +59,7 @@ The second dataset that we are going to make connections with has to do with bat
 
 The table will look a little like this, and have these fields. You will notice that there is overlap between some of the fields here and in our previous dataset. 
 
-Year LG	City Team FName	LName Pos1 Pos Bats G AB R H 2B	3B HR RBI BB K AVG OBP SLG 
+Year LG	City Team FName	LName Pos1 Pos Bats AB R H 2B	3B HR RBI BB K AVG OBP SLG 
 
 Each of the fields defined:
 -Year: The year in which all of the data was pulled (will also be name of the file becuase the data is grouped by year. 
