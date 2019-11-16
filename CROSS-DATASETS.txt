@@ -1,0 +1,8 @@
+Query 1:
+Most values in each dataset are integers or floats and there are no apparent violations of this after safe casting the Japanese Baseball Table, so the results of the query are expected. 
+
+Query 2:
+Again, most values in each dataset are integers or floats and there are no apparent violations of this after safe casting the Japanese Baseball Table, so the results of the query are expected. Team IDs need to be added in the transforms
+
+Query 3:
+The result of the query is expected due to the same reasons above. Again, there are many incomplete names in the Japanese baseball table that need to be transformed using Beam. 
